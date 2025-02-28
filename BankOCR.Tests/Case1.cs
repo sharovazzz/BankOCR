@@ -5,7 +5,7 @@ namespace BankOCR.Tests
     public class Case1
     {
         [Fact]
-        public void Digit0()
+        public void Load_Digit0_Zeros()
         {
             var fileParser = new FileParser();
             var expected = new Row([0, 0, 0, 0, 0, 0, 0, 0, 0]);
@@ -16,7 +16,7 @@ namespace BankOCR.Tests
         }
 
         [Fact]
-        public void Digit1()
+        public void Load_Digit1_Units()
         {
             var fileParser = new FileParser();
             var expected = new Row([1, 1, 1, 1, 1, 1, 1, 1, 1]);
@@ -27,7 +27,7 @@ namespace BankOCR.Tests
         }
 
         [Fact]
-        public void EmptyFile_ReturnsEmptyList()
+        public void Load_EmptyFile_EmptyList()
         {
             var fileParser = new FileParser();
 
@@ -37,7 +37,7 @@ namespace BankOCR.Tests
         }
 
         [Fact]
-        public void NotFoundFile_ReturnsEmptyList()
+        public void Load_NotFoundFile_EmptyList()
         {
             var fileParser = new FileParser();
 
@@ -47,7 +47,7 @@ namespace BankOCR.Tests
         }
 
         [Fact]
-        public void OneRowInFile_ReturnsOneRow()
+        public void Load_OneRowInFile_OneRow()
         {
             var fileParser = new FileParser();
 
@@ -57,7 +57,7 @@ namespace BankOCR.Tests
         }
 
         [Fact]
-        public void TwoRowInFile_ReturnsTwoRow()
+        public void Load_TwoRowInFile_TwoRow()
         {
             var fileParser = new FileParser();
 
